@@ -5,10 +5,11 @@ resource "docker_image" "this" {
 
 resource "docker_container" "this" {
   image = docker_image.this.image_id
-  name = "terraform_container"
+  name = var.my_variable
 
   ports {
     internal = 80
     external = 8000
   }
 }
+
