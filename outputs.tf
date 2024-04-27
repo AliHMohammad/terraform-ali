@@ -1,8 +1,8 @@
 
 
-output "container_ports" {
-  description = "Ports of the docker container"
-  value = docker_container.this.ports
+output "url" {
+  description = "Browser URL for container"
+  value = join(":", ["http://localhost", tostring(var.external_port)])
 }
 
 

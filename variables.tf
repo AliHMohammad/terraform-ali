@@ -1,5 +1,6 @@
-variable "my_variable" {
-  type = string
-  default = "container"
+variable "external_port" {
+  description = "external port for container"
+  type = number
+  default = 8090
 }
 
